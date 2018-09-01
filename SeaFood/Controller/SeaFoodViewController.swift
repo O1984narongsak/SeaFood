@@ -28,9 +28,34 @@ class SeaFoodViewController: UIViewController,UINavigationControllerDelegate,UII
         if let userPickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
             imageView.image = userPickedImage
             
+            guard let ciimage = CIImage(image: userPickedImage) else {fatalError("Could not covert UIImage to CIImage.")}
+            detect(image: ciimage)
         }
         
         imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: - detech CoreML
+    
+    func detect(image: CIImage){
+        
+        guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {fatalError("Loding CoreML Module failed.")}
+        
+        let request = VNCoreMLRequest(model: model) { (request,error) in
+            guard let results = request.results as? [VNClassificationObservation] else {fatalError("Model failed to prcess image.")
+            }
+            
+            print(results)
+        }
+        
+        let handler = VNImageRequestHandler(ciImage: image)
+        
+        do {
+           try handler.perform([request])
+        } catch {
+            print(error)
+        }
+        
     }
 
     //MARK: - Camera Button

@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F1AA32AB213AFE4500BA6AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA32AA213AFE4500BA6AE7 /* AppDelegate.swift */; };
-		F1AA32AD213AFE4500BA6AE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA32AC213AFE4500BA6AE7 /* ViewController.swift */; };
+		F1AA32AD213AFE4500BA6AE7 /* SeaFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA32AC213AFE4500BA6AE7 /* SeaFoodViewController.swift */; };
 		F1AA32B0213AFE4500BA6AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AA32AE213AFE4500BA6AE7 /* Main.storyboard */; };
 		F1AA32B2213AFE4800BA6AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AA32B1213AFE4800BA6AE7 /* Assets.xcassets */; };
 		F1AA32B5213AFE4800BA6AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AA32B3213AFE4800BA6AE7 /* LaunchScreen.storyboard */; };
+		F1AA32BD213AFE8400BA6AE7 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F1AA32BC213AFE8300BA6AE7 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F1AA32A7213AFE4500BA6AE7 /* SeaFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeaFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AA32AA213AFE4500BA6AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1AA32AC213AFE4500BA6AE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1AA32AC213AFE4500BA6AE7 /* SeaFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeaFoodViewController.swift; sourceTree = "<group>"; };
 		F1AA32AF213AFE4500BA6AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1AA32B1213AFE4800BA6AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1AA32B4213AFE4800BA6AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1AA32B6213AFE4800BA6AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1AA32BC213AFE8300BA6AE7 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,39 @@
 			isa = PBXGroup;
 			children = (
 				F1AA32AA213AFE4500BA6AE7 /* AppDelegate.swift */,
-				F1AA32AC213AFE4500BA6AE7 /* ViewController.swift */,
-				F1AA32AE213AFE4500BA6AE7 /* Main.storyboard */,
+				F1AA32C0213AFEC300BA6AE7 /* Model */,
+				F1AA32BF213AFEAA00BA6AE7 /* Controller */,
+				F1AA32BE213AFE9A00BA6AE7 /* View */,
 				F1AA32B1213AFE4800BA6AE7 /* Assets.xcassets */,
+				F1AA32BC213AFE8300BA6AE7 /* Inceptionv3.mlmodel */,
 				F1AA32B3213AFE4800BA6AE7 /* LaunchScreen.storyboard */,
 				F1AA32B6213AFE4800BA6AE7 /* Info.plist */,
 			);
 			path = SeaFood;
+			sourceTree = "<group>";
+		};
+		F1AA32BE213AFE9A00BA6AE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA32AE213AFE4500BA6AE7 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1AA32BF213AFEAA00BA6AE7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA32AC213AFE4500BA6AE7 /* SeaFoodViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1AA32C0213AFEC300BA6AE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +163,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1AA32AD213AFE4500BA6AE7 /* ViewController.swift in Sources */,
+				F1AA32AD213AFE4500BA6AE7 /* SeaFoodViewController.swift in Sources */,
+				F1AA32BD213AFE8400BA6AE7 /* Inceptionv3.mlmodel in Sources */,
 				F1AA32AB213AFE4500BA6AE7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
